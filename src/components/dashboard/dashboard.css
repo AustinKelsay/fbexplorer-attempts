@@ -1,0 +1,119 @@
+/* dashboard */
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+}
+
+/* Nav */
+
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 57%;
+    height: 10%;
+    padding-left: 1%;
+
+    background: #5d5e60;
+    border: 1px solid #d7d6d6;
+    border-top: none;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 5px 5px;
+} 
+
+.nav-header{
+    padding-top: 2%;
+    font-size: 2.1rem;
+    font-weight: 400;
+    background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Audiowide', sans-serif;
+
+}
+
+.master-search {
+    margin: 1% auto;
+    height: 40%;
+}
+
+.master-search-container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1% auto;
+    margin-right: 3%;
+}
+
+.master-search-container p {
+    margin: 2% auto;
+    font-size: 0.8rem;;
+}
+
+.master-search-container h5 {
+    text-align: start;
+    margin-left: 1%;
+    margin-top: 4%;
+}
+
+.nav-checkbox{
+    margin: 5%;
+    margin-right: 10%;
+}
+
+/* main container */
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+    margin-right: 10%;
+}
+
+
+/* DataContainer */
+.DataContainer {
+    display: flex;
+    margin-right: 10%;
+    width: 75%;
+    height: 95%;
+}
+
+.infinite-scroll-component .infinite-scroll {
+    width: 100%;
+    margin: 1% auto;
+    border-radius: 5px; 
+    overflow: scroll;
+}
+
+.infinite-scroll-component__outerdiv {
+    width: 100%;
+    height: 100%;
+    background-color: #8d8d92;
+    padding: 0.1%;
+    padding-right: 0.3%;
+    margin-bottom: 0%;
+    margin: 2%;
+    margin-right: 0%;
+    border: 1px solid black;
+    border-radius: 5px; 
+    box-shadow: 0px 10px 13px -7px #000000
+}
+
+.infinite-scroll::-webkit-scrollbar {
+    width: 1em;
+}
+   
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(109, 37, 154, 0.46);
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: rgba(109, 37, 154, 0.46);
+    outline: 1px solid darkgray;
+    border-radius: 10px;
+}
