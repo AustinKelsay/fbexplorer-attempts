@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import Profile from './Profile.js';
 import Signin from './Signin.js';
-import {
-  UserSession,
-  AppConfig
-} from 'blockstack';
+import {UserSession, makeAuthRequest, redirectToSignInWithAuthRequest} from 'blockstack';
+import {appConfig} from "../utils/constants"
 
-const appConfig = new AppConfig()
+
 const userSession = new UserSession({ appConfig: appConfig })
 
 export default class Onboarding extends Component {
@@ -14,7 +12,18 @@ export default class Onboarding extends Component {
 
   handleSignIn(e) {
     e.preventDefault();
-    userSession.redirectToSignIn();
+
+    const authRequest = userSession.makeAuthRequest(
+      userSession.generateAndStoreTransitKey(),
+      'https://127.0.0.1:3000/explorer',
+      'https://127.0.0.1:3000/manifest.json',
+      ['store_write', 'publish_data'],
+      'https://127.0.0.1:3000/',
+      {
+        solicitGaiaHubUrl: true
+      } // new options param
+    );
+    userSession.redirectToSignInWithAuthRequest(authRequest);
   }
 
   handleSignOut(e) {
