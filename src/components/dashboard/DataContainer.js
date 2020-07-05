@@ -11,34 +11,21 @@ const DataContainer = () => {
     //    }
     // })
 
+    const tests = ['test', 'test', 'test', 'test', 'testy', 'test', 'test', 'test', 'test', 'testy', 'test', 'test', 'test', 'test', 'testy', 'test', 'test', 'test', 'test', 'testy']
+
     return(
         <div key={Date.now()} className="DataContainer">
                 <InfiniteScroll
                 className="infinite-scroll"
                 dataLength={100}
-                height={'100%'}
+                height={'48rem'}
                 loader={<h4>Loading...</h4>}
                 >
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
-                    <h1>Test</h1>
+                    {
+                        tests.map((test) => {
+                            return <h1>{test}</h1>
+                        })
+                    }
                     
              
                     {/* {props.query.length
